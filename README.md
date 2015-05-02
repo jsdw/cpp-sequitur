@@ -14,7 +14,17 @@ Anyway, it is available for download here and can be freely used for any purpose
 
 #Basic Usage
 
-The download includes a `main.cpp`, which creates a simple program that can be passed a filename to work on, and will process it and then print out some details.
+The download includes a `main.cpp`, which creates a simple program that can be passed a filename to work on, and will process it and then print out some details. You should be able to compile using `clang` (tested on clang-602.0.49) with:
+
+```
+clang -lstdc++ -std=c++11 -Wc++11-extensions main.cpp sequitur/*.cpp
+```
+
+or `gcc` 4.8.* (untested on newer versions) using `g++` with:
+
+```
+g++ -std=c++11 main.cpp sequitur/*.cpp
+```
 
 To put to use in a custom project, just add `sequitur.hpp` and all of the files in `sequitur` to your project. Additionally, add `main.cpp` to compile a simple example. I have omitted unit tests in the download for simplicity.
 
