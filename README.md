@@ -26,6 +26,17 @@ or `gcc` 4.8.* (untested on newer versions) using `g++` with:
 g++ -std=c++11 main.cpp sequitur/*.cpp
 ```
 
+Alternately, I have been kindly provided with a `CMakeLists.txt` file for `cmake`. To make use of this, do something like:
+
+```
+mkdir build
+cd build
+cmake ..
+make -j4
+```
+
+Which handels generating a makefile, and builds into a seperate `build` directory utilising 4 cores.
+
 To put to use in a custom project, just add `sequitur.hpp` and all of the files in `sequitur` to your project. Additionally, add `main.cpp` to compile a simple example. I have omitted unit tests in the download for simplicity.
 
 ```
