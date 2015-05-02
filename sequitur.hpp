@@ -565,7 +565,7 @@ namespace jw
         }
 
     template<typename Type>
-    void Sequitur<Type>::printList(const Symbol * list, unsigned int number = 0) const
+    void Sequitur<Type>::printList(const Symbol * list, unsigned int number) const
         {
         list->forUntil([&number,this](const Symbol * item)
             {
@@ -596,7 +596,7 @@ namespace jw
     template<typename Type>
     void Sequitur<Type>::printSequence() const
         {
-        printList(rule_index.at(0));
+        printList(rule_index.at(0), 0);
         std::cout << std::endl;
         }
 
@@ -606,7 +606,7 @@ namespace jw
         for(const auto & rule_pair : rule_index )
             {
             std::cout << rule_pair.first << ": ";
-            printList(rule_pair.second);
+            printList(rule_pair.second, 0);
             std::cout << std::endl;
             }
         }
@@ -618,7 +618,7 @@ namespace jw
         for(const auto & rule_pair : rule_index )
             {
             std::cout << rule_pair.first << ": ";
-            printList(rule_pair.second);
+            printList(rule_pair.second, 0);
             std::cout << std::endl;
             }
 
