@@ -2,6 +2,7 @@
 #define PAIR_HASH_HPP
 
 #include <tuple>
+#include <cstdlib>
 
 namespace std
     {

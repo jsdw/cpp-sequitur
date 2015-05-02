@@ -6,6 +6,10 @@
 // - otherwise, ObjectPool<classname>.create and ObjectPool<classname>.remove
 //   act as new and delete.
 
+#include <stack>
+#include <algorithm>
+#include <utility>
+
 namespace jw{
 
     template<typename Child>

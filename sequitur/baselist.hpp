@@ -5,6 +5,7 @@
 
 #include <functional>
 #include <stdexcept>
+#include <utility>
 
 namespace jw
     {
