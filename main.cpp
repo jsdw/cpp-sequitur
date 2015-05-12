@@ -99,11 +99,11 @@ int main(int argc, char* argv[])
         // Symbol::next() and Symbol::prev() allow iteration through them.
         // Symbol::end()/begin() returns a pair<[final_symbol], distance>
         //
-        // Here, we just count the symbols and minus 2; there is a RuleHead symbol at one side of each 
-        // rule, and a RuleTail symbol at the other, to allow for more efficient navigation. As such,
-        // they are ignored in the count.
+        // Here, we count how many hops it takes to get to the end. This will get us one less than
+        // the total number of symbols. Since two of the symbols are RuleHead and RuleTail, we 
+        // minus another one to get the number of symbols used in the rule.
         //
-        symbol_total += it->second->end().second - 2;
+        symbol_total += it->second->end().second - 1;
         ++it;
         }
 
