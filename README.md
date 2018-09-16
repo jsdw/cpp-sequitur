@@ -12,7 +12,7 @@ The template nature of this implementation means that it can be applied to any p
 
 Anyway, it is available for download here and can be freely used for any purpose you like.
 
-#Basic Usage
+# Basic Usage
 
 The download includes a `main.cpp`, which creates a simple program that can be passed a filename to work on, and will process it and then print out some details. You should be able to compile using `clang` (tested on clang-602.0.49) with:
 
